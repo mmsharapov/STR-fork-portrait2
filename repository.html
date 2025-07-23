@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="prism.css" rel="stylesheet" />
+    <script src="prism.js"></script>
+</head>
+<style>
+	.main_div{
+		width: 90%;
+		border: 1px solid #EEE;
+		border-radius: 5px;
+		margin: 1% auto;
+		padding: 10px; 
+		text-align: center;
+	}
+</style>
+
+<BODY>
+
+<a href="index.html#s" class="back-to-home-link">
+    ← Return to main page
+</a>
+
+<div class="main_div">
+<h1>Repository</h1>
+
+<p>
+You can read more about the Steganeisodos project here . . . [link to NTR version].
+</p>
+
+<p>
+The current version of this project uses the <span class="term">specific typing rhythm (STR) strategy</span>, 
+in which a confidence interval is constructed and then used for each character according to the 3-sigma rule:
+</p>
+
+<!--- 
+	All special characters must be replaced with their HTML equivalents. 
+	<  	&lt;
+	> 	&gt;
+	& 	&amp;
+	etc.
+--->
+<pre><code class="language-javascript">
+let algo_name = "conf. interval. ver."; // Please provide the name of your algorithm
+
+function checker(stats, arr){
+	for(let j=0; j  &lt; stats[0].length; j++){
+		const column = getColumn(stats, j);
+		const low = Aver(column) - 3 * Math.sqrt(Var(column));
+		const upp = Aver(column) + 3 * Math.sqrt(Var(column));
+		if((arr[j] &lt;  low) || (arr[j] &gt;  upp)) return false;
+	}
+	return true;
+}
+</code></pre>
+
+<p>
+This method recognizes the user well, but it is not a difficult obstacle for an attacker:
+</p>
+
+
+<table>
+<tbody>
+    <tr>
+    <td>conf. interval. ver.</td>
+    <td><font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;</td>
+    </tr>
+    <tr>
+    <td>Hacker`s attempts</td>
+    <td><font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;</td>
+    </tr>
+</tbody>
+</table>
+
+</div>
+<p style="margin-bottom: 50px;"></p>
+
+<script>
+
+
+
+document.addEventListener('DOMContentLoaded', footer);
+
+</script>
+
+
+</BODY>
+</HTML>

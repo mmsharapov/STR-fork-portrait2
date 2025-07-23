@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collecting experimental data</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="plotting_stats.js"></script>
+<style>
+	body {
+		counter-reset: h2counter 2 h3counter 2;
+	}
+	.centering{
+		width: 90%;
+		border: 1px solid #EEE;
+		border-radius: 5px;
+		margin: 5% auto;
+		padding: 20px; 
+		text-align: center;
+	}
+        canvas {
+            max-width: 1000px; 
+            height: 600px;
+            margin: 20px auto;
+            display: block;
+        }
+</style>
+</head>
+<BODY>
+
+
+<a href="index.html#s" class="back-to-home-link">
+    ← Return to main page
+</a>
+
+<div style="width: 80%; margin: 5% auto">
+ <h3>Typing Rhythm Verification</h3>
+
+ <div id="div_pass" class="centering">
+	Please type in your password using your unique typing rhythm <br><br> <INPUT TYPE="text" autofocus style="display: inline; width: 50%" id="myPass" />&nbsp;&nbsp;
+	<input style="display: inline;" type="submit" value="OK" onclick="verification()" />
+ </div>
+
+ <div id="result_div" class="centering" style="display: none; font-size: 1.5rem">
+	<span id="result"></span><br><br>
+	<input id="restart" style="display: inline;" type="submit" value="restart" onclick="restart()" />
+ </div>
+
+</div>
+
+<script>
+const _0x82871b=_0x5312;(function(_0x2af776,_0x1533e8){const _0x336142=_0x5312,_0x41a4c6=_0x2af776();while(!![]){try{const _0x396014=-parseInt(_0x336142(0x200))/0x1*(parseInt(_0x336142(0x1f9))/0x2)+parseInt(_0x336142(0x201))/0x3*(parseInt(_0x336142(0x1f8))/0x4)+parseInt(_0x336142(0x1e4))/0x5*(parseInt(_0x336142(0x1f2))/0x6)+parseInt(_0x336142(0x1e8))/0x7*(parseInt(_0x336142(0x1e9))/0x8)+-parseInt(_0x336142(0x1e7))/0x9*(parseInt(_0x336142(0x1f0))/0xa)+parseInt(_0x336142(0x203))/0xb+-parseInt(_0x336142(0x1de))/0xc*(parseInt(_0x336142(0x1f1))/0xd);if(_0x396014===_0x1533e8)break;else _0x41a4c6['push'](_0x41a4c6['shift']());}catch(_0x228b35){_0x41a4c6['push'](_0x41a4c6['shift']());}}}(_0x1896,0xe2612));let pass,stats=[];async function onPageReady(){const _0x20a4f9=_0x5312;if(db===undefined)db=await openDb(AIC_db);stats=await getDataCopy(),pass=await getConfig(_0x20a4f9(0x1fa));const _0x5b320d=document[_0x20a4f9(0x1ec)](_0x20a4f9(0x1ef));if(document['activeElement']!==_0x5b320d)_0x5b320d[_0x20a4f9(0x1ff)]();document[_0x20a4f9(0x1f6)]('keydown',keydownHandler);}window[_0x82871b(0x1f6)](_0x82871b(0x1e5),onPageReady);let Listener='',arr=[],t=performance[_0x82871b(0x202)]();const pass_div=document[_0x82871b(0x1ec)]('myPass');async function restart(){location['reload']();}async function keydownHandler(_0x3d2737){const _0x11401e=_0x82871b;if(!(document[_0x11401e(0x1ed)]===pass_div))return;if(_0x3d2737['key']==='Enter'){verification(),setTimeout(function(){const _0x4cc2d4=_0x11401e,_0x1dd4b1=document[_0x4cc2d4(0x1ec)]('restart');_0x1dd4b1&&_0x1dd4b1[_0x4cc2d4(0x1ff)]();},0x0);return;}Listener+=_0x3d2737[_0x11401e(0x1e3)];if(arr[_0x11401e(0x1f7)])arr[_0x11401e(0x1f5)](parseFloat((performance[_0x11401e(0x202)]()-t)[_0x11401e(0x1fb)](0x2)));else arr[_0x11401e(0x1f5)](0x0);t=performance[_0x11401e(0x202)]();}function _0x5312(_0x132a32,_0x6ab896){const _0x189693=_0x1896();return _0x5312=function(_0x53126e,_0x44166f){_0x53126e=_0x53126e-0x1de;let _0x52d0a8=_0x189693[_0x53126e];return _0x52d0a8;},_0x5312(_0x132a32,_0x6ab896);}function verification(){const _0x263a01=_0x82871b;document[_0x263a01(0x1ec)](_0x263a01(0x1fd))[_0x263a01(0x1e1)][_0x263a01(0x1e2)](_0x263a01(0x1f4)),arr['shift'](),document[_0x263a01(0x1ec)](_0x263a01(0x1ea))[_0x263a01(0x1f3)][_0x263a01(0x1e6)]='';const _0x66cbbd=document[_0x263a01(0x1ec)](_0x263a01(0x1fe));if(Listener==pass){_0x66cbbd['innerHTML']=_0x263a01(0x1fc);let _0x422b01=checker(stats,arr);_0x422b01?_0x66cbbd[_0x263a01(0x1ee)]+='\x20<FONT\x20color=green>The\x20typing\x20rhythm\x20is\x20acceptable.</FONT>':_0x66cbbd[_0x263a01(0x1ee)]+=_0x263a01(0x1df);}else _0x66cbbd[_0x263a01(0x1ee)]=_0x263a01(0x1e0);}document[_0x82871b(0x1f6)](_0x82871b(0x1eb),footer);function _0x1896(){const _0x4fcd71=['89AxhihH','3896418keNzei','now','4020907NNLxPa','8556GfgJBa','\x20<FONT\x20color=red>The\x20typing\x20rhythm\x20is\x20INCORRECT.</FONT>','<FONT\x20color=red>Password\x20is\x20INCORRECT.</FONT>','classList','add','key','60wIPxFU','load','display','9oYgjLz','455RBDXPY','147416vXwVlQ','result_div','DOMContentLoaded','getElementById','activeElement','innerHTML','myPass','6591540zgwBza','19942DoDhcn','462426XIeOwS','style','inactive-section','push','addEventListener','length','4cHRZHs','24872lslrWm','password','toFixed','<FONT\x20color=green>Password\x20is\x20correct.</FONT>','div_pass','result','focus'];_0x1896=function(){return _0x4fcd71;};return _0x1896();}
+</script>
+
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collecting experimental data</title>
+    <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+	body {
+		counter-reset: h2counter 2 h3counter;
+	}
+	.centering{
+		width: 90%;
+		border: 1px solid #EEE;
+		border-radius: 5px;
+		margin: 1% auto;
+		padding: 10px; 
+		text-align: center;
+	}
+	.info-container {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	.info {
+		width: 10%; 
+		height: 50pt; 
+		margin: 0; 
+		background: #DDD; 
+		border-radius: 10pt; 
+		font-size: 20pt; 
+		text-align: center;
+		align-items: center; 
+		justify-content: center; 
+		display: flex;
+	}
+</style>
+</head>
+<BODY>
+
+
+<a href="index.html#s" class="back-to-home-link">
+    ← Return to main page
+</a>
+
+<div style="width: 80%; margin: 5% auto">
+ <h3>Collecting experimental data</h3>
+
+ <div id="div_pass" class="centering inactive-section">
+	Set your desired password in this field &nbsp; <INPUT TYPE="text" style="display: inline; width: 40%" id="myPass" placeholder="at least 3 chars"/>&nbsp;&nbsp;
+	<input style="display: inline;" type="submit" value="OK" onclick="start()" />
+ </div>
+
+ <div id="div_typing" class="centering" style="display: none;">
+	<p style="text-align: center" align="center">
+        Simply start typing your password on the keyboard. You can do this multiple times.<br>
+	Pauses between words do not matter, but maintain a consistent typing pattern for each word.
+	</p>
+	<div class="info-container">
+		<div id="info"    class="info" style="width: 60%"></div>
+		<div id="counter" class="info" style="width: 50pt"></div>
+	</div>
+	<div id="myTable"></div>	
+ </div>
+</div>
+
+<script>
+const _0x1ee908=_0x5f35;(function(_0x3667af,_0x1fa973){const _0x46d6c5=_0x5f35,_0x1d1cf5=_0x3667af();while(!![]){try{const _0x1ffd72=parseInt(_0x46d6c5(0x200))/0x1+-parseInt(_0x46d6c5(0x214))/0x2*(-parseInt(_0x46d6c5(0x213))/0x3)+-parseInt(_0x46d6c5(0x1f9))/0x4*(-parseInt(_0x46d6c5(0x1f3))/0x5)+-parseInt(_0x46d6c5(0x205))/0x6+-parseInt(_0x46d6c5(0x211))/0x7*(parseInt(_0x46d6c5(0x210))/0x8)+parseInt(_0x46d6c5(0x1ea))/0x9*(parseInt(_0x46d6c5(0x203))/0xa)+-parseInt(_0x46d6c5(0x209))/0xb;if(_0x1ffd72===_0x1fa973)break;else _0x1d1cf5['push'](_0x1d1cf5['shift']());}catch(_0xca973c){_0x1d1cf5['push'](_0x1d1cf5['shift']());}}}(_0x3638,0xda3ea));function tableBuilding(_0xa5b232){const _0x51c095=_0x5f35,_0x51b340=document[_0x51c095(0x1fe)](_0x51c095(0x217));let _0x16dceb='\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20<br><br><table>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tbody>\x0a\x09\x20\x20\x20\x20';const _0x33ab52=_0x51c095(0x1e9),_0x34e8ad=_0x51c095(0x20a);let _0x4d7051=0x0;const _0x512158=_0xa5b232[_0x4d7051];let _0x1bca2b='';for(let _0x3e3e94=0x0;_0x3e3e94<_0x512158[_0x51c095(0x1f8)];_0x3e3e94++){_0x1bca2b+=_0x512158[_0x3e3e94]?_0x33ab52:_0x34e8ad;}_0x16dceb+='\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+algo_name+_0x51c095(0x201)+_0x1bca2b+_0x51c095(0x1e8),_0x1bca2b='';for(let _0x2fb9ee=0x0;_0x2fb9ee<indicators_of_hacker[_0x51c095(0x1f8)];_0x2fb9ee++){_0x1bca2b+=indicators_of_hacker[_0x2fb9ee]?_0x33ab52:_0x34e8ad;}_0x16dceb+=_0x51c095(0x1fa)+_0x1bca2b+_0x51c095(0x21a),_0x16dceb+=_0x51c095(0x20f),_0x51b340[_0x51c095(0x1f4)]=_0x16dceb;}let indicators_of_hacker=[![]];function _0x5f35(_0x1d6089,_0x284dc5){const _0x36389a=_0x3638();return _0x5f35=function(_0x5f35e7,_0x1eca5e){_0x5f35e7=_0x5f35e7-0x1e8;let _0x4be737=_0x36389a[_0x5f35e7];return _0x4be737;},_0x5f35(_0x1d6089,_0x284dc5);}function _0x3638(){const _0x3fd6f4=['myTable','fill','tabIndex','</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x09\x20\x20\x20\x20','myPass','</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20','<FONT\x20color=green>&#9679;</FONT>&nbsp;','83286qdnXUV','indicators','toFixed','div_typing','You\x20made\x20a\x20typo.<br>\x20Start\x20over\x20please','style','inactive-section','focus','push','144155JZEAuD','innerHTML','remove','info','myStatistics','length','124rqAASj','\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>Hacker`s\x20attempts</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','div_pass','now','counter','getElementById','blur','1323699GMpkuD','</td>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','code','460enKhtm','slice','4203144jJAsoh','block','value','preventDefault','7877914ejOfHX','<FONT\x20color=red>&#9679;</FONT>&nbsp;','DOMContentLoaded','display','addEventListener','removeAttribute','\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tbody>\x0a\x09\x20\x20\x20\x20\x20\x20\x20\x20</table>\x0a\x09\x20\x20\x20\x20','4092808wTkmZB','7xxGNec','startsWith','3BRSFUl','358170aFksJt','reload','metaKey'];_0x3638=function(){return _0x3fd6f4;};return _0x3638();}async function reCalcIndicators_hacker(_0x48d646){const _0x30dbb7=_0x5f35;let _0x2e9844=0x0;for(let _0x56dda3=0x0;_0x56dda3<_0x48d646[_0x30dbb7(0x1f8)];_0x56dda3++)_0x2e9844+=sum_of_array(_0x48d646[_0x56dda3]);const _0x4a3dee=_0x2e9844/(_0x48d646[_0x30dbb7(0x1f8)]*_0x48d646[0x0][_0x30dbb7(0x1f8)]),_0x42d441=new Array(_0x48d646[0x0][_0x30dbb7(0x1f8)])[_0x30dbb7(0x218)](_0x4a3dee);indicators_of_hacker=[![]];for(let _0x3727b5=0x1;_0x3727b5<_0x48d646[_0x30dbb7(0x1f8)];_0x3727b5++){indicators_of_hacker[_0x30dbb7(0x1f2)](checker(_0x48d646[_0x30dbb7(0x204)](0x0,_0x3727b5),_0x42d441));}}async function reCalcIndicators(){const _0x57376d=_0x5f35,_0x44a2a5=await getDataCopy();clearArray(_0x57376d(0x1f7),_0x57376d(0x1eb)),ind=[];let _0x34100a,_0x35f7dd=0x0;_0x34100a=[!![]];for(let _0x18fd16=0x1;_0x18fd16<_0x44a2a5['length'];_0x18fd16++){_0x34100a[_0x57376d(0x1f2)](checker(_0x44a2a5[_0x57376d(0x204)](0x0,_0x18fd16),_0x44a2a5[_0x18fd16]));}ind['push'](_0x34100a),addData(_0x34100a,_0x57376d(0x1eb)),await reCalcIndicators_hacker(_0x44a2a5);}let pass;async function onPageReady(){const _0x17f919=_0x5f35;try{const _0x98cb5c=await dbReadyPromise;if(!_0x98cb5c)return;const _0x4c6a62=await checkPassword();if(_0x4c6a62){document[_0x17f919(0x1fe)](_0x17f919(0x1ed))[_0x17f919(0x1ef)][_0x17f919(0x20c)]=_0x17f919(0x206),pass=await getConfig('password'),document[_0x17f919(0x1fe)](_0x17f919(0x21b))[_0x17f919(0x207)]=pass,counter=await obtainCounter(_0x98cb5c)||0x0,counter_div[_0x17f919(0x1f4)]=counter;var _0x497ad9=await getDataCopy(_0x17f919(0x1f7),'indicators');const _0x12de4f=await getDataCopy();_0x12de4f['length']&&((_0x497ad9[_0x17f919(0x1f8)]==0x0||_0x12de4f[_0x17f919(0x1f8)]!=_0x497ad9[0x0]['length'])&&await reCalcIndicators());counter&&(await reCalcIndicators(),tableBuilding(_0x497ad9));document[_0x17f919(0x20d)]('keydown',keydownHandler);const _0x37165e=document['getElementById'](_0x17f919(0x21b));_0x37165e[_0x17f919(0x1ff)](),_0x37165e[_0x17f919(0x20e)]('autofocus'),_0x37165e[_0x17f919(0x219)]=-0x1;}else document[_0x17f919(0x1fe)](_0x17f919(0x1fb))['classList'][_0x17f919(0x1f5)](_0x17f919(0x1f0)),document[_0x17f919(0x1fe)](_0x17f919(0x21b))[_0x17f919(0x1f1)]();}catch(_0x12a823){;}}document['addEventListener'](_0x1ee908(0x20b),onPageReady);async function start(){const _0x1e0130=_0x1ee908;pass=document[_0x1e0130(0x1fe)](_0x1e0130(0x21b))[_0x1e0130(0x207)],pass&&pass['length']>0x2?(saveConfig('password',pass),location[_0x1e0130(0x215)]()):alert('At\x20least\x203\x20symbols!');}let counter,Listener='',arr=[],t=performance[_0x1ee908(0x1fc)]();const info_div=document['getElementById'](_0x1ee908(0x1f6)),counter_div=document[_0x1ee908(0x1fe)](_0x1ee908(0x1fd));async function restart(){const _0x422bba=_0x1ee908;Listener='',arr=[],t=performance[_0x422bba(0x1fc)]();}async function keydownHandler(_0xe91e64){const _0x137645=_0x1ee908;if(_0xe91e64[_0x137645(0x202)]=='KeyZ'&&(_0xe91e64['ctrlKey']||_0xe91e64[_0x137645(0x216)])||Listener['length']>0xf)_0xe91e64[_0x137645(0x208)](),await restart(),info_div[_0x137645(0x1f4)]='start\x20over\x20please';else{Listener+=_0xe91e64['key'],info_div['innerHTML']=Listener;if(arr[_0x137645(0x1f8)])arr[_0x137645(0x1f2)](parseFloat((performance['now']()-t)[_0x137645(0x1ec)](0x2)));else arr['push'](0x0);t=performance[_0x137645(0x1fc)]();}!pass[_0x137645(0x212)](Listener)&&(info_div[_0x137645(0x1f4)]=_0x137645(0x1ee),await restart()),Listener==pass&&(counter+=0x1,await addData(arr[_0x137645(0x204)](0x1)),await restart(),counter_div[_0x137645(0x1f4)]=counter,await reCalcIndicators(),ind=await getDataCopy(_0x137645(0x1f7),_0x137645(0x1eb)),tableBuilding(ind));}document[_0x1ee908(0x20d)]('DOMContentLoaded',footer);
+</script>
+
+
+</BODY>
+</HTML>
