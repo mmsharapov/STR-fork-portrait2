@@ -21,7 +21,7 @@
 </style>
 
 <BODY>
-
+ 
 <a href="index.html#s" class="back-to-home-link">
     ← Return to main page
 </a>
@@ -36,7 +36,11 @@ You can read more about the Steganeisodos project here
 
 <p>
 The current version of this project uses the <span class="term">specific typing rhythm (STR) strategy</span>, 
-in which a confidence interval is constructed and then used for each character according to the 3-sigma rule:
+in which portraits of the average user time for pressing each button are compared with 
+the portrait of the data being checked. 
+The <b>portrait</b> is a binary vector, each element of which shows the deviation of the 
+pressing time in a greater or lesser direction relative to the absolute average time. 
+The easiest way to understand this is to simply look at the code of the checking function:
 </p>
 
 <!--- 
@@ -47,21 +51,31 @@ in which a confidence interval is constructed and then used for each character a
 	etc.
 --->
 <pre><code class="language-javascript">
-let algo_name = "conf. interval. ver."; // Please provide the name of your algorithm
+let algo_name = "portait 2 ver."; // Please provide the name of your algorithm
 
+function Portrait_2(arr) {
+		const average = Aver(arr);
+		let portraitString = "";
+		for (let i = 0; i &lt; arr.length; i++){
+				portraitString += (arr[i] &lt; average) ? "0" : "1";
+		}
+		return portraitString;
+		}
+		
 function checker(stats, arr){
-	for(let j=0; j  &lt; stats[0].length; j++){
-		const column = getColumn(stats, j);
-		const low = Aver(column) - 3 * Math.sqrt(Var(column));
-		const upp = Aver(column) + 3 * Math.sqrt(Var(column));
-		if((arr[j] &lt;  low) || (arr[j] &gt;  upp)) return false;
+	const av = [];
+	for(let j = 0; j &lt; stats[0].length; j++){ 
+		av.push(Aver(getColumn(stats, j)));
 	}
-	return true;
+	const p_arr = Portrait_2(arr);
+	const p_av = Portrait_2(av);	
+	return p_arr === p_av;
 }
 </code></pre>
 
 <p>
-This method recognizes the user well, but it is not a difficult obstacle for an attacker:
+If the user adheres to his secret rhythm, then this method perfectly recognizes the user and 
+at the same time rejects the attempts of the attacker:
 </p>
 
 
@@ -69,11 +83,14 @@ This method recognizes the user well, but it is not a difficult obstacle for an 
 <tbody>
     <tr>
     <td>conf. interval. ver.</td>
-    <td><font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;</td>
+    <td>
+		<font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font><font color="green">●</font>
+	</td>
     </tr>
     <tr>
     <td>Hacker`s attempts</td>
-    <td><font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="red">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;<font color="green">●</font>&nbsp;</td>
+    <td>
+		<font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font><font color="red">●</font>
     </tr>
 </tbody>
 </table>

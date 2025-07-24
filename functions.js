@@ -39,17 +39,26 @@ function getColumn(S, k) {
   return column;
 }
 
+ 
+let algo_name = "portait 2 ver."; // Please provide the name of your algorithm
 
-let algo_name = "conf. interval. ver."; // Please provide the name of your algorithm
-
+function Portrait_2(arr) {
+        const average = Aver(arr);
+        let portraitString = "";
+        for (let i = 0; i < arr.length; i++){
+              portraitString += (arr[i] < average) ? "0" : "1";
+        }
+        return portraitString;
+      }
+      
 function checker(stats, arr){
-	for(let j=0; j<stats[0].length; j++){
-		const column = getColumn(stats, j);
-		const low = Aver(column) - 3*Math.sqrt(Var(column));
-		const upp = Aver(column) + 3*Math.sqrt(Var(column));
-		if((arr[j] <  low) || (arr[j] >  upp)) return false;
+	const av = [];
+	for(let j=0; j<stats[0].length; j++){ 
+		av.push(Aver(getColumn(stats, j)));
 	}
-	return true;
+	const p_arr = Portrait_2(arr);
+	const p_av = Portrait_2(av);	
+	return p_arr === p_av;
 }
 
 
